@@ -57,31 +57,29 @@
             letter-spacing: 2px;
         }
 
-        /* Контент должен занимать всю доступную высоту */
         .content {
             flex: 1;
         }
 
-        /* Карусель с горизонтальной прокруткой */
         .carousel-container {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch; /* Поддержка плавной прокрутки в Safari */
+            -webkit-overflow-scrolling: touch;
             padding: 20px 0;
-            gap: 15px; /* Расстояние между элементами */
+            gap: 15px;
         }
 
         .carousel-item {
-            flex: 0 0 auto; /* Не расширяется и не сжимается */
-            width: 80vw; /* На мобильных экранах элемент будет занимать 80% ширины */
-            max-width: 300px; /* Ограничиваем ширину для больших экранов */
+            flex: 0 0 auto; 
+            width: 80vw; 
+            max-width: 300px;
             height: 300px;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             position: relative;
-            scroll-snap-align: start; /* Элемент начинает с прокрутки */
+            scroll-snap-align: start;
         }
 
         .carousel-item img {
@@ -91,9 +89,8 @@
             border-radius: 10px;
         }
 
-        /* Горизонтальный скролл */
         .carousel-container::-webkit-scrollbar {
-            display: none; /* Убираем скроллбар */
+            display: none;
         }
 
         .hover-text {
@@ -135,7 +132,6 @@
             opacity: 1;
         }
 
-        /* Блок подписки */
         .subscribe-block {
             margin: 40px auto;
             display: flex;
@@ -153,7 +149,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Для мобильных */
+            flex-wrap: wrap;
         }
 
         .subscribe-block input {
@@ -183,7 +179,6 @@
             background-color: #ff6347;
         }
 
-        /* Sticky footer */
         footer {
             background-color: rgba(34, 34, 34, 0.9);
             color: #fff;
@@ -227,15 +222,14 @@
             color: #ffdf00;
         }
 
-        /* Медиа-запросы для экранов шире 768px */
         @media (min-width: 768px) {
             .carousel-container {
-                justify-content: center; /* Элементы центрируются на больших экранах */
-                overflow-x: hidden; /* Отключаем горизонтальный скролл */
+                justify-content: center;
+                overflow-x: hidden;
             }
 
             .carousel-item {
-                width: 220px; /* Фиксированный размер для ПК */
+                width: 220px;
             }
 
             .logo {
@@ -282,7 +276,6 @@
 <div class="content">
     <h2>Our Products</h2>
 
-    <!-- Контейнер для карусели с горизонтальной прокруткой -->
     <div class="carousel-container">
         <div class="carousel-item">
             <a href="https://store.steampowered.com/app/2965940/Soviet_Anomaly_7/" target="_blank">
