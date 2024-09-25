@@ -21,6 +21,7 @@
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(34, 34, 34, 0.9));
             color: #fff;
             text-align: center;
+            overflow-x: hidden;
         }
 
         body {
@@ -62,29 +63,25 @@
         }
 
         /* Карусель с горизонтальной прокруткой */
-        .carousel {
+        .carousel-container {
             display: flex;
-            overflow-x: auto; /* Горизонтальный скролл */
-            scroll-snap-type: x mandatory; /* Автоподстройка прокрутки */
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            padding: 20px 0;
+            gap: 15px; /* Расстояние между элементами */
             -webkit-overflow-scrolling: touch;
-            margin: 30px auto;
-            padding-bottom: 10px; /* Отступ для скролла */
-            max-width: 100%;
         }
 
         .carousel-item {
-            flex: 0 0 90%; /* На мобильных показывается один элемент (занимает 90% экрана) */
-            scroll-snap-align: start;
-            margin: 0 10px;
-            height: 330px;
+            flex: 0 0 auto; /* Не расширяется и не сжимается */
+            width: 80vw; /* На мобильных экранах элемент будет занимать 80% ширины */
+            max-width: 300px; /* Ограничиваем ширину для больших экранов */
+            height: 300px;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .carousel-item:hover {
-            transform: scale(1.05);
+            position: relative;
+            scroll-snap-align: start; /* Элемент начинает с прокрутки */
         }
 
         .carousel-item img {
@@ -92,6 +89,11 @@
             height: 100%;
             object-fit: cover;
             border-radius: 10px;
+        }
+
+        /* Горизонтальный скролл */
+        .carousel-container::-webkit-scrollbar {
+            display: none; /* Убираем скроллбар */
         }
 
         .hover-text {
@@ -227,13 +229,13 @@
 
         /* Медиа-запросы для экранов шире 768px */
         @media (min-width: 768px) {
-            .carousel {
-                flex-wrap: wrap; /* На больших экранах показываем все элементы */
-                overflow-x: unset;
+            .carousel-container {
+                justify-content: center; /* Элементы центрируются на больших экранах */
+                overflow-x: hidden; /* Отключаем горизонтальный скролл */
             }
 
             .carousel-item {
-                flex: 0 0 220px; /* Фиксированный размер */
+                width: 220px; /* Фиксированный размер для ПК */
             }
 
             .logo {
@@ -280,13 +282,14 @@
 <div class="content">
     <h2>Our Products</h2>
 
-    <div class="carousel">
+    <!-- Контейнер для карусели с горизонтальной прокруткой -->
+    <div class="carousel-container">
         <div class="carousel-item">
             <a href="https://store.steampowered.com/app/2965940/Soviet_Anomaly_7/" target="_blank">
                 <img src="soviet_anomaly.png" alt="Soviet Anomaly 7">
                 <div class="hover-text">Soviet Anomaly 7</div>
             </a>
-            <div class="game-price" id="price-2965940">Loading price...</div> 
+            <div class="game-price" id="price-2965940">Loading price...</div>
         </div>
         <div class="carousel-item no-link">
             <a href="#">
