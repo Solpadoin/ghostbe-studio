@@ -36,7 +36,7 @@
         /* Стиль для аббревиатуры GS */
         .logo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 48px;
+            font-size: 36px; /* Более разумный размер шрифта */
             font-weight: 700;
             color: #b0b0b0; /* Цвет аббревиатуры как у слогана */
             margin: 0;
@@ -50,7 +50,7 @@
         }
 
         h2 {
-            font-size: 32px;
+            font-size: 24px;
             margin: 40px 0;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -64,13 +64,14 @@
         .carousel {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Flex-контейнер для мобильных */
             margin: 30px auto;
             max-width: 1000px;
         }
 
         .carousel-item {
             position: relative;
-            margin: 0 15px;
+            margin: 10px;
             width: 220px;
             height: 330px;
             overflow: hidden;
@@ -101,7 +102,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 18px;
             opacity: 0;
             transition: opacity 0.5s ease;
             border-radius: 10px;
@@ -138,9 +139,8 @@
             align-items: center;
         }
 
-        /* Увеличение размера текста */
         .subscribe-block label {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 10px;
         }
 
@@ -148,19 +148,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap; /* Для мобильных */
         }
 
         .subscribe-block input {
-            padding: 15px;
+            padding: 10px;
             font-size: 16px;
             border: none;
             border-radius: 5px;
-            width: 250px;
+            width: 100%;
+            max-width: 350px;
             margin-right: 10px;
+            margin-bottom: 10px;
         }
 
         .subscribe-block button {
-            padding: 15px 25px;
+            padding: 10px 20px;
             font-size: 16px;
             background-color: #ff4500;
             color: #fff;
@@ -168,6 +171,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            width: auto;
         }
 
         .subscribe-block button:hover {
@@ -178,7 +182,7 @@
         footer {
             background-color: rgba(34, 34, 34, 0.9);
             color: #fff;
-            padding: 30px 0;
+            padding: 20px 0;
             font-size: 14px;
             position: sticky;
             bottom: 0;
@@ -201,7 +205,7 @@
         }
 
         .social-icons i {
-            font-size: 30px;
+            font-size: 24px;
             margin: 0 15px;
             cursor: pointer;
             color: #fff;
@@ -214,8 +218,47 @@
 
         .game-price {
             margin-top: 10px;
-            font-size: 18px;
+            font-size: 16px;
             color: #ffdf00;
+        }
+
+        /* Медиа-запросы для экранов шире 768px */
+        @media (min-width: 768px) {
+            .logo {
+                font-size: 48px;
+            }
+
+            .slogan {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .carousel-item {
+                width: 220px;
+            }
+
+            .hover-text {
+                font-size: 20px;
+            }
+
+            .subscribe-block input, .subscribe-block button {
+                font-size: 16px;
+            }
+
+            footer a {
+                font-size: 18px;
+            }
+
+            .social-icons i {
+                font-size: 30px;
+            }
+
+            .game-price {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
