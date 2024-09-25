@@ -65,11 +65,11 @@
         /* Карусель с горизонтальной прокруткой */
         .carousel-container {
             display: flex;
-            overflow-x: scroll;
+            overflow-x: auto;
             scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; /* Поддержка плавной прокрутки в Safari */
             padding: 20px 0;
             gap: 15px; /* Расстояние между элементами */
-            -webkit-overflow-scrolling: touch;
         }
 
         .carousel-item {
