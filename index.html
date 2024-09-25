@@ -36,9 +36,9 @@
         /* Стиль для аббревиатуры GS */
         .logo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 36px; /* Более разумный размер шрифта */
+            font-size: 36px; /* Размер шрифта */
             font-weight: 700;
-            color: #b0b0b0; /* Цвет аббревиатуры как у слогана */
+            color: #b0b0b0;
             margin: 0;
         }
 
@@ -61,18 +61,21 @@
             flex: 1;
         }
 
+        /* Карусель с горизонтальной прокруткой */
         .carousel {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap; /* Flex-контейнер для мобильных */
+            overflow-x: auto; /* Горизонтальный скролл */
+            scroll-snap-type: x mandatory; /* Автоподстройка прокрутки */
+            -webkit-overflow-scrolling: touch;
             margin: 30px auto;
-            max-width: 1000px;
+            padding-bottom: 10px; /* Отступ для скролла */
+            max-width: 100%;
         }
 
         .carousel-item {
-            position: relative;
-            margin: 10px;
-            width: 220px;
+            flex: 0 0 90%; /* На мобильных показывается один элемент (занимает 90% экрана) */
+            scroll-snap-align: start;
+            margin: 0 10px;
             height: 330px;
             overflow: hidden;
             border-radius: 10px;
@@ -224,6 +227,15 @@
 
         /* Медиа-запросы для экранов шире 768px */
         @media (min-width: 768px) {
+            .carousel {
+                flex-wrap: wrap; /* На больших экранах показываем все элементы */
+                overflow-x: unset;
+            }
+
+            .carousel-item {
+                flex: 0 0 220px; /* Фиксированный размер */
+            }
+
             .logo {
                 font-size: 48px;
             }
@@ -234,10 +246,6 @@
 
             h2 {
                 font-size: 32px;
-            }
-
-            .carousel-item {
-                width: 220px;
             }
 
             .hover-text {
