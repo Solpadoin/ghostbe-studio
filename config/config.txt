@@ -1,0 +1,52 @@
+# Ghostbe Studio landing configuration.
+# Edit values after "=". Repeated SERVICE_N_* and PROJECT_N_* blocks are rendered dynamically.
+
+studioName=Ghostbe Studio
+heroEyebrow=Indie studio for web, games, and UE5 assets
+heroLead=We create dynamic websites, complex web platforms, video games, and Unreal Engine 5 assets with a hands-on indie production style.
+aboutText=Ghostbe Studio is a small indie studio creating websites, including heavy dynamic platforms such as CRM, ERP, SaaS systems, and Laravel or Symfony-based products. We also build video games and Unreal Engine 5 assets for developers and players.
+contactTitle=Let us build something interactive.
+contactEmailHref=mailto:ghostbestudio@example.com
+footerText=Ghostbe Studio © 2026
+
+webDivisionUrl=https://bigsafeweb.net/
+fabUrl=https://www.fab.com/sellers/Ghostbe%20Studio
+youtubeUrl=https://youtube.com/@ghostbestudio
+tiktokUrl=https://www.tiktok.com/@ghostbe.studio
+instagramUrl=https://www.instagram.com/
+
+SERVICE_1_TITLE=Web platforms
+SERVICE_1_TEXT=Websites, complex CRM, ERP, SaaS systems, and framework-based products on Laravel and Symfony.
+SERVICE_1_LINK_TEXT=Special web division
+SERVICE_1_URL=https://bigsafeweb.net/
+
+SERVICE_2_TITLE=Video games
+SERVICE_2_TEXT=Small and experimental games with direct production, strong mood, and fast iteration.
+SERVICE_2_LINK_TEXT=View projects
+SERVICE_2_URL=#projects
+
+SERVICE_3_TITLE=UE5 assets
+SERVICE_3_TEXT=Game-ready Unreal Engine 5 assets for developers who need practical production pieces.
+SERVICE_3_LINK_TEXT=Fab store
+SERVICE_3_URL=https://www.fab.com/sellers/Ghostbe%20Studio
+
+PROJECT_1_TITLE=Soviet Anomaly 7
+PROJECT_1_STATUS=Released on Steam
+PROJECT_1_TEXT=A strange atmospheric project built around anomaly zones and compact survival tension.
+PROJECT_1_IMAGE=assets/projects/soviet-anomaly-7.png
+PROJECT_1_URL=https://store.steampowered.com/app/2965940/Soviet_Anomaly_7/
+PROJECT_1_LINK_TEXT=Open project
+
+PROJECT_2_TITLE=Stone Simulator MP
+PROJECT_2_STATUS=In development
+PROJECT_2_TEXT=A multiplayer oddity with a deliberately simple premise and room for social chaos.
+PROJECT_2_IMAGE=assets/projects/stone-simulator-mp.png
+PROJECT_2_URL=#contact
+PROJECT_2_LINK_TEXT=Ask about it
+
+PROJECT_3_TITLE=Ultra Mage
+PROJECT_3_STATUS=In development
+PROJECT_3_TEXT=An action fantasy experiment about power, motion, and readable combat feedback.
+PROJECT_3_IMAGE=assets/projects/ultra-mage.png
+PROJECT_3_URL=#contact
+PROJECT_3_LINK_TEXT=Ask about it
