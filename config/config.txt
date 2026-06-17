@@ -6,7 +6,7 @@ heroEyebrow=Indie studio for web, games, and UE5 assets
 heroLead=We create dynamic websites, complex web platforms, video games, and Unreal Engine 5 assets with a hands-on indie production style.
 aboutText=Ghostbe Studio is a small indie studio creating websites, including heavy dynamic platforms such as CRM, ERP, SaaS systems, and Laravel or Symfony-based products. We also build video games and Unreal Engine 5 assets for developers and players.
 contactTitle=Let us build something interactive.
-contactEmailHref=mailto:ghostbestudio@example.com
+contactEmailHref=mailto:b.semesko@gmail.com
 footerText=Ghostbe Studio © 2026
 
 webDivisionUrl=https://bigsafeweb.net/

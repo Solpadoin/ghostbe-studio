@@ -464,7 +464,7 @@ h3 {
   .hero-status {
     position: static;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: -2rem;
+    margin-top: 1.5rem;
   }
 
   .section-heading {
@@ -512,7 +512,7 @@ h3 {
   }
 
   .hero-status {
-    margin-top: 0.5rem;
+    margin-top: 1.25rem;
   }
 
   .hero {
