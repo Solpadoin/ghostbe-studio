@@ -2,6 +2,8 @@
 
 Static landing page for Ghostbe Studio, ready for GitHub Pages.
 
+https://solpadoin.github.io/ghostbe-studio/#home
+
 ## Content config
 
 Editable copy, links, services, and projects live in:
